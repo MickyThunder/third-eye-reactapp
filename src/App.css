@@ -39,8 +39,9 @@
 .flex-container {
   display: flex;
   flex-direction: column;
-  font-size: 10px;
+  font-size: 12px;
   text-align: left;
+  max-width: 100vh;
 }
 
 @keyframes App-logo-spin {
