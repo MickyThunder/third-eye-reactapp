@@ -1,6 +1,6 @@
 import logo from './headern.png';
 import './App.css';
-import BasicExample, { Card1, Card2 } from './card';
+import { Card1, Card2 } from './card';
 import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -40,11 +40,6 @@ function App() {
       </div>
     </div >
   );
-}
-
-
-function FluidImage(image) {
-  return <Image src={image} fluid />;
 }
 
 
