@@ -1,4 +1,4 @@
-import logo from './header.jpg';
+import logo from './headern.png';
 import './App.css';
 import BasicExample from './card'
 function App() {
@@ -9,12 +9,10 @@ function App() {
 
       </header>
       <div class="mtext">
-        Tal - Third Eye View
+       Third Eye View
       </div>
       <div style={{display:"inline-flex"}}>
         {BasicExample()}
-       
-
 
       </div>
     </div>

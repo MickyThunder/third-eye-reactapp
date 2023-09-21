@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 function BasicExample() {
     return (
         <>
-            <Card border="success" style={{ width: '35rem' }}>
+            <Card border="success" style={{ width: '25rem',alignContent:'flex-end' }}>
                 <Card.Body>
                     <Card.Title>Did you know:</Card.Title>
                     <Card.Text>
@@ -11,15 +11,13 @@ function BasicExample() {
                         <p>In the last 6 months in Mine Super
                             <ul>
                                 <li>
-                                    - 70% of your colleagues within your cohort have increased their Death cover to $4,000,000.
+                             70% of your colleagues within your cohort have increased their Death cover to $4,000,000.
                                 </li>
                                 <li>
-                                    - 50% of your colleagues within your cohort have increased their TPD cover to $2,000,0000
+                                    50% of your colleagues within your cohort have increased their TPD cover to $2,000,0000
                                 </li>
                             </ul>
 
-
-                            .
                         </p>
                     </Card.Text>
                 </Card.Body>
