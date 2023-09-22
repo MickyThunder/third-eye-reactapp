@@ -124,6 +124,8 @@ function MyVerticallyCenteredModal(props) {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      fullscreen
+      
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -131,10 +133,10 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <div><iframe title="MemberAnalytics" src="https://app.powerbi.com/reportEmbed?reportId=5666b327-daff-45d2-94c2-85e5a0e08d5d&autoAuth=true&ctid=530211ad-1dcf-42db-b0cc-f0ae94dbf11a" frameborder="0" allowFullScreen="true" style={{
-          'min-height': '70vh',
-          'min-width': '55vw'
-        }}></iframe></div>
+       <iframe title="MemberAnalytics" src="https://app.powerbi.com/reportEmbed?reportId=5666b327-daff-45d2-94c2-85e5a0e08d5d&autoAuth=true&ctid=530211ad-1dcf-42db-b0cc-f0ae94dbf11a" frameborder="0" allowFullScreen="true" style={{
+          'min-height': '100vh',
+          'min-width': '90vw'
+        }}></iframe>
       </Modal.Body>
       <Modal.Footer>
         <Button onClick={props.onHide}>Close</Button>

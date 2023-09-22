@@ -1,6 +1,6 @@
 import logo from './headern.png';
 import './App.css';
-import { Card1, MyVerticallyCenteredModal,ModalView } from './card';
+import { Card1, ModalView } from './card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
