@@ -6,15 +6,15 @@ import React, { useState } from "react";
 import exclamation from './exlamation.jpg';
 import Image from 'react-bootstrap/Image';
 import Modal from 'react-bootstrap/Modal';
-
+import Col from 'react-bootstrap/Col';
 function Card1() {
-  const [hideCard2, setHideCard2] = useState(false);
+  const [insightShow, setHideInsight] = useState(false);
   return (
 
-    <><Card border="success">
+    <><Col className='col-8'><Card border="success">
       <Card.Body>
         <Card.Title><Card.Img variant="center" src={turtle} /><ColorfulText>Did you know:</ColorfulText>
-          <Image src={exclamation} width={20} onClick={() => setHideCard2(!hideCard2)} />
+          <Image src={exclamation} width={20} onClick={() => setHideInsight(!insightShow)} />
         </Card.Title>
 
         <Card.Text>
@@ -34,7 +34,7 @@ function Card1() {
         <Button variant="success">Apply</Button>
       </Card.Body>
     </Card>
-      {hideCard2 && <Card border="success" style={{ 'margin-top': '2vh' }}>
+      <Card border="success" style={{ 'margin-top': '2vh' }}>
         <Card.Body>
           <Card.Title><ColorfulText>Your Current Cover:</ColorfulText></Card.Title>
           <Card.Text>
@@ -43,8 +43,10 @@ function Card1() {
           </Card.Text>
           <Button variant="success">Adjust My Cover</Button>{' '}
         </Card.Body>
-      </Card>
-      }</>
+      </Card></Col>
+      <Col className='col-4'><ModalView visible={insightShow}></ModalView>
+      </Col>
+      </>
 
 
   );
@@ -125,7 +127,7 @@ function MyVerticallyCenteredModal(props) {
       aria-labelledby="contained-modal-title-vcenter"
       centered
       fullscreen
-      
+
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
@@ -133,7 +135,7 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-       <iframe title="MemberAnalytics" src="https://app.powerbi.com/reportEmbed?reportId=5666b327-daff-45d2-94c2-85e5a0e08d5d&autoAuth=true&ctid=530211ad-1dcf-42db-b0cc-f0ae94dbf11a" frameborder="0" allowFullScreen="true" style={{
+        <iframe title="MemberAnalytics" src="https://app.powerbi.com/reportEmbed?reportId=5666b327-daff-45d2-94c2-85e5a0e08d5d&autoAuth=true&ctid=530211ad-1dcf-42db-b0cc-f0ae94dbf11a" frameborder="0" allowFullScreen="true" style={{
           'min-height': '100vh',
           'min-width': '90vw'
         }}></iframe>
@@ -145,30 +147,26 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 
-function ModalView() {
+function ModalView(props) {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <>
-      <Card style={{ width: '18rem' }}>
+      {props.visible && <><Card style={{ width: '18rem' }}>
 
         <Card.Body>
           <Card.Title>Insights</Card.Title>
           <Card.Text>
-          The insights provided is based the cohort of the occupation category and age group you have assigned to by your employer.
+            The insights provided is based the cohort of the occupation category and age group you have assigned to by your employer.
           </Card.Text>
           <Button variant="success" onClick={() => setModalShow(true)}>
             Click Here for Insights
           </Button>
         </Card.Body>
-      </Card>
-
-
-      <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
-    </>
+      </Card><MyVerticallyCenteredModal
+          show={modalShow}
+          onHide={() => setModalShow(false)} /></>
+      }</>
   );
 }
 
