@@ -135,7 +135,7 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <iframe title="MemberAnalytics" src="https://app.powerbi.com/reportEmbed?reportId=5666b327-daff-45d2-94c2-85e5a0e08d5d&autoAuth=true&ctid=530211ad-1dcf-42db-b0cc-f0ae94dbf11a" frameborder="0" allowFullScreen="true" style={{
+        <iframe title="MemberAnalytics" src="https://app.powerbi.com/reportEmbed?reportId=8c6a79f6-bb81-4671-ae48-16b68c4b2f39&autoAuth=true&ctid=530211ad-1dcf-42db-b0cc-f0ae94dbf11a" frameborder="0" allowFullScreen="true" style={{
           'min-height': '100vh',
           'min-width': '90vw'
         }}></iframe>
